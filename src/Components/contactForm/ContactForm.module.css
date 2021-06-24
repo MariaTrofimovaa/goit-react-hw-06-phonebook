@@ -1,0 +1,27 @@
+.formContainer {
+  margin: 0 auto;
+}
+
+.inputData {
+  border: none;
+  border-radius: 5px;
+  height: 20px;
+  margin: 5px auto;
+  display: block;
+  padding: 14px;
+}
+
+.addBtn {
+  display: block;
+  margin: 20px auto;
+  width: 150px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: rgb(55, 177, 136);
+  border: none;
+  
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-weight: 500;
+}
