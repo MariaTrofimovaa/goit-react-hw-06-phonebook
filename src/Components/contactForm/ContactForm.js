@@ -20,7 +20,6 @@ class ContactForm extends Component {
     event.preventDefault();
     console.log("ok");
 
-    // вынесла проверку из App (функция addContact). Взяла контакты из пропсов. РАБОТАЕТ!!!
     const contactExist = this.props.contacts.find(
       (contact) => contact.name === this.state.name
     );
@@ -29,7 +28,6 @@ class ContactForm extends Component {
       alert(`Contact <-- ${this.state.name} --> already exists`);
       return;
     }
-    console.log(this.state);
     this.props.addContact(this.state);
     this.reset();
   };

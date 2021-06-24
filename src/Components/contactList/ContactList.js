@@ -37,7 +37,6 @@ ContactList.propTypes = {
 const mapStateToProps = (state) => {
   const items = state.contacts.items;
   const filter = state.contacts.filter;
-  console.log(state);
 
   const normalizedFilter = filter.toLowerCase();
 
@@ -50,10 +49,6 @@ const mapStateToProps = (state) => {
     filter: state.contacts.filter,
   };
 };
-
-// const mapStateToProps = (state) => ({
-//   filteredContacts: state.contacts.items.items,
-// })
 
 const mapDispatchToProps = { onDelete: removeContact };
 

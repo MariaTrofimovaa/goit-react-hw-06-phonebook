@@ -4,7 +4,6 @@ import { addContact, removeContact, filterContacts } from "./phoneBook.actions";
 
 const ItemsReducer = createReducer([], {
   [addContact]: (state, action) => {
-    // console.log([...state]);
     return [...state, action.payload];
   },
   [removeContact]: (state, action) => [
