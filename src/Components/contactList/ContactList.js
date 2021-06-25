@@ -34,7 +34,7 @@ ContactList.propTypes = {
   onDelete: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (state) => {
+const getVisibleContacts = (state) => {
   const items = state.contacts.items;
   const filter = state.contacts.filter;
 
@@ -43,9 +43,12 @@ const mapStateToProps = (state) => {
   const filteredContacts = items.filter((item) =>
     item.name.toLowerCase().includes(normalizedFilter)
   );
+  return filteredContacts;
+};
 
+const mapStateToProps = (state) => {
   return {
-    contacts: filteredContacts,
+    contacts: getVisibleContacts(state),
     filter: state.contacts.filter,
   };
 };

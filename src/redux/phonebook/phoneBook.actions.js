@@ -3,13 +3,7 @@
 import { createAction } from "@reduxjs/toolkit";
 import { v4 as uuid } from "uuid";
 
-import {
-  ADD_CONTACT,
-  REMOVE_CONTACT,
-  FILTER_CONTACTS,
-} from "./phoneBook.types";
-
-const addContact = createAction(ADD_CONTACT, (contact) => {
+const addContact = createAction("phonebook/addContact", (contact) => {
   return {
     payload: {
       ...contact,
@@ -17,19 +11,19 @@ const addContact = createAction(ADD_CONTACT, (contact) => {
     },
   };
 });
-const removeContact = createAction(REMOVE_CONTACT);
-const filterContacts = createAction(FILTER_CONTACTS);
+const removeContact = createAction("phonebook/removeContact");
+const filterContacts = createAction("phonebook/filterContacts");
 
 export { addContact, removeContact, filterContacts };
 
 // *********** React - Redux *********** //
 
-// import {
-//   ADD_CONTACT,
-//   REMOVE_CONTACT,
-//   FILTER_CONTACTS,
-// } from "./phoneBook.types";
 // import { v4 as uuid } from "uuid";
+
+// const ADD_CONTACT = "phonebook/addContact";
+// const REMOVE_CONTACT = "phonebook/removeContact";
+// const FILTER_CONTACTS = "phonebook/filterContacts";
+  
 
 // const addContact = (contact) => ({
 //   type: ADD_CONTACT,
